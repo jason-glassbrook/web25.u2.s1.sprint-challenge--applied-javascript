@@ -15,5 +15,6 @@ function Header() {
         date   = newElem ("span"),
         title  = newElem ("h1"),
         temp   = newElem ("span");
-  
+  /// build structure ///
+  header.append (date , title , temp);
 }

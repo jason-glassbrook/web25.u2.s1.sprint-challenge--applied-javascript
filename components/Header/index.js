@@ -18,6 +18,8 @@
 
   const myContainer = document.querySelector (".header-container");
   const myHeader = Header (myData);
+
+  myContainer.append (myHeader);
 }
 
 function Header(data) {

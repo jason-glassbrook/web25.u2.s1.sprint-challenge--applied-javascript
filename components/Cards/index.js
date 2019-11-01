@@ -58,23 +58,27 @@
 ***********************************************************/
 function Card(data) {
   /// create elements ///
-  const card           = newElem ("div"),
-        headline       = newElem ("div"),
-        author         = newElem ("div");
-        authorImageDiv = newElem ("div");
-        authorImage    = newElem ("img");
-        authorName     = newElem ("span");
+  const card        = newElem ("div"),
+        headline    = newElem ("div"),
+        author      = newElem ("div");
+        authorImage = newElem ("div");
+        authorPhoto = newElem ("img");
+        authorName  = newElem ("span");
   /// build structure ///
   card.append (headline , author);
-  author.append (authorImageDiv , authorName);
-  authorImageDiv.append (authorImage);
+  author.append (authorImage , authorName);
+  authorImage.append (authorPhoto);
   /// class it up! ///
-  card           .upClass ("card");
-  headline       .upClass ("headline");
-  author         .upClass ("author");
-  authorImageDiv .upClass ("img-container");
-  authorImage    .upClass ("author-image");
-  authorName     .upClass ("author-name");
+  card        .upClass ("card");
+  headline    .upClass ("headline");
+  author      .upClass ("author");
+  authorImage .upClass ("img-container");
+  authorPhoto .upClass ("author-photo");
+  authorName  .upClass ("author-name");
+  /// add data attributes ///
+  card        .setAttribute ("data-topic" , data["topic"]);
+  authorPhoto .setAttribute ("data-author-photo" , data["authorPhoto"]);
+  authorName  .setAttribute ("data-author-name" , data["authorName"]);
   /// return ///
   return (card);
 }

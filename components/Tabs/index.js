@@ -15,7 +15,7 @@
   const myAPI = `https://lambda-times-backend.herokuapp.com/topics`;
   let myData = {};
 
-  const myContainer = document.querySelector (".tabs");
+  const myContainer = document.querySelector (".topics");
   let myTabs = [];
 
   axios

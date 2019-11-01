@@ -15,6 +15,8 @@
     "date"  : `Lambda Times`,
     "temp"  : `98°`,
   };
+
+  const container = document.querySelector (".header-container");
 }
 
 function Header(data) {

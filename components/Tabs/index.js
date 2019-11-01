@@ -30,12 +30,12 @@
       console.log (myTabs);
       myContainer.append (...myTabs);
     })
-    // .catch (function (re) {
-    //   console.log ("--- 😨 --- uh-oh --- 😨 ---");
-    // })
-    // .finally (function (re) {
-    //   console.log ("--- 😘 --- we're done here --- 😘 ---");
-    // })
+    .catch (function (re) {
+      console.log ("--- 😨 --- uh-oh --- 😨 ---");
+    })
+    .finally (function (re) {
+      console.log ("--- 😘 --- we're done here --- 😘 ---");
+    })
 }
 
 /***********************************************************

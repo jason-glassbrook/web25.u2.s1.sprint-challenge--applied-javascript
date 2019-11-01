@@ -16,7 +16,7 @@
   let myData = {};
 
   const myContainer = document.querySelector (".topics");
-  let myTabs = [];
+  const myTabs = [];
 
   axios
     .get (myAPI)
@@ -27,8 +27,10 @@
       myData = re.data;
       console.log (myData);
       /// make babies ///
-      myTabs = myData["topics"].map (
-        (data) => (Tab ({"topic" : data}))
+      myData["topics"].forEach (
+        (data) => {
+          myTabs.push (Tab ({"topic" : data}));
+        }
       );
       console.log (myTabs);
       /// give babies ///

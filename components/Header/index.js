@@ -9,6 +9,14 @@
 //  </div >
 // And add it to the DOM in the .header-container component
 
+{
+  const myData = {
+    "title" : `SMARCH 28, 2019`,
+    "date"  : `Lambda Times`,
+    "temp"  : `98°`,
+  };
+}
+
 function Header(data) {
   /// create elements ///
   const header = newElem ("div"),

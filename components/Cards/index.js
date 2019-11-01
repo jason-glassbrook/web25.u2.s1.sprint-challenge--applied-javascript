@@ -68,6 +68,13 @@ function Card(data) {
   card.append (headline , author);
   author.append (authorImageDiv , authorName);
   authorImageDiv.append (authorImage);
+  /// class it up! ///
+  card           .upClass ("card");
+  headline       .upClass ("headline");
+  author         .upClass ("author");
+  authorImageDiv .upClass ("img-container");
+  authorImage    .upClass ("author-image");
+  authorName     .upClass ("author-name");
   /// return ///
   return (card);
 }

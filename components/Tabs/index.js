@@ -21,15 +21,15 @@
   axios
     .get (myAPI)
     .then (function (re) {
-      console.log ("--- :D --- success --- :D ---");
+      console.log ("--- 😄 --- success --- 😄 ---");
       console.log (re.data);
       // myContainer.append (...myTabs);
     })
     .catch (function (re) {
-      console.log ("--- D: --- uh-oh --- D: ---");
+      console.log ("--- 😨 --- uh-oh --- 😨 ---");
     })
     .finally (function (re) {
-      console.log ("--- *: --- we're done here --- :* ---");
+      console.log ("--- 😘 --- we're done here --- 😘 ---");
     })
 }
 

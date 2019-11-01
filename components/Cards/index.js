@@ -1,3 +1,4 @@
+"use strict";
 // STEP 3: Create Article cards.
 // -----------------------
 // Send an HTTP GET request to the following address: https://lambda-times-backend.herokuapp.com/articles
@@ -24,6 +25,7 @@
 {
   const myAPI = `https://lambda-times-backend.herokuapp.com/articles`;
   let myData = {};
+  let myArticleData = {};
 
   const myContainer = document.querySelector (".cards-container");
   let myCards = [];
@@ -36,21 +38,41 @@
       /// store data ///
       myData = re.data;
       console.log (myData);
-      // /// make babies ///
-      // myCards = myData["topics"].map (
-      //   (data) => (Card ({"topic" : data}))
-      // );
-      // console.log (myCards);
-      // /// give babies ///
-      // myContainer.append (...myCards);
+      /// get articles from data ///
+      myArticleData = getArticlesFromTopics (myData["articles"]);
+      console.log (myArticleData);
+      /// make babies ///
+      myArticleData.forEach (
+        (data) => {
+          myCards.push (Card (data));
+        }
+      );
+      console.log (myCards);
+      /// give babies ///
+      myContainer.append (...myCards);
       ///
     })
-    .catch ((re) => {
-      console.log ("--- 😨 --- uh-oh --- 😨 ---");
-    })
-    .finally ((re) => {
-      console.log ("--- 😘 --- we're done here --- 😘 ---");
-    })
+    // .catch ((re) => {
+    //   console.log ("--- 😨 --- uh-oh --- 😨 ---");
+    // })
+    // .finally ((re) => {
+    //   console.log ("--- 😘 --- we're done here --- 😘 ---");
+    // })
+}
+
+/***************************************
+  HELPERS
+***************************************/
+
+function getArticlesFromTopics (data) {
+  const articles = [];
+  // debugger;
+  for (let topic of Object.keys(data)) {
+    for (let article of data[topic]) {
+      articles.push ({"topic" : topic , ...article});
+    }
+  }
+  return (articles);
 }
 
 /***********************************************************
@@ -60,9 +82,9 @@ function Card(data) {
   /// create elements ///
   const card        = newElem ("div"),
         headline    = newElem ("div"),
-        author      = newElem ("div");
-        authorImage = newElem ("div");
-        authorPhoto = newElem ("img");
+        author      = newElem ("div"),
+        authorImage = newElem ("div"),
+        authorPhoto = newElem ("img"),
         authorName  = newElem ("span");
   /// build structure ///
   card        .append (headline , author);
@@ -82,7 +104,7 @@ function Card(data) {
   /// add data ///
   headline    .insertAdjacentHTML ("afterbegin" , data["headline"]);
   authorPhoto .src = data["authorPhoto"];
-  authorImage .insertAdjacentHTML ("afterbegin" , data["authorName"]);
+  authorName  .insertAdjacentHTML ("afterbegin" , data["authorName"]);
   /// return ///
   return (card);
 }

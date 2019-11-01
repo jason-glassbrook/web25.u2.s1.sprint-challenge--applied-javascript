@@ -60,10 +60,14 @@ function Card(data) {
   /// create elements ///
   const card           = newElem ("div"),
         headline       = newElem ("div"),
-        authorInfo     = newElem ("div");
+        author         = newElem ("div");
         authorImageDiv = newElem ("div");
         authorImage    = newElem ("img");
         authorName     = newElem ("span");
+  /// build structure ///
+  card.append (headline , author);
+  author.append (authorImageDiv , authorName);
+  authorImageDiv.append (authorImage);
   /// return ///
   return (card);
 }

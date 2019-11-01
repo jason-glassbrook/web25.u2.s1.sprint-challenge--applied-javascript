@@ -20,7 +20,7 @@
 
   axios
     .get (myAPI)
-    .then (function (re) {
+    .then ((re) => {
       ///
       console.log ("--- 😄 --- success --- 😄 ---");
       /// store data ///
@@ -35,10 +35,10 @@
       myContainer.append (...myTabs);
       ///
     })
-    .catch (function (re) {
+    .catch ((re) => {
       console.log ("--- 😨 --- uh-oh --- 😨 ---");
     })
-    .finally (function (re) {
+    .finally ((re) => {
       console.log ("--- 😘 --- we're done here --- 😘 ---");
     })
 }

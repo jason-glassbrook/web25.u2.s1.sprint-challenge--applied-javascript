@@ -21,14 +21,19 @@
   axios
     .get (myAPI)
     .then (function (re) {
+      ///
       console.log ("--- 😄 --- success --- 😄 ---");
+      /// store data ///
       myData = re.data;
       console.log (myData);
+      /// make babies ///
       myTabs = myData["topics"].map (
         (data) => (Tab ({"topic" : data}))
       );
       console.log (myTabs);
+      /// give babies ///
       myContainer.append (...myTabs);
+      ///
     })
     .catch (function (re) {
       console.log ("--- 😨 --- uh-oh --- 😨 ---");

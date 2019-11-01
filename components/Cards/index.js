@@ -79,6 +79,10 @@ function Card(data) {
   card        .setAttribute ("data-topic" , data["topic"]);
   authorPhoto .setAttribute ("data-author-photo" , data["authorPhoto"]);
   authorName  .setAttribute ("data-author-name" , data["authorName"]);
+  /// add data ///
+  headline   .insertAdjacentHTML ("afterbegin" , data["headline"]);
+  authorPhoto .src = data["authorPhoto"];
+  authorImage .insertAdjacentHTML ("afterbegin" , data["authorName"]);
   /// return ///
   return (card);
 }

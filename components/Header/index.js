@@ -25,4 +25,6 @@ function Header(data) {
   title .insertAdjacentHTML ("afterbegin" , data["title"]);
   date  .insertAdjacentHTML ("afterbegin" , data["date"]);
   temp  .insertAdjacentHTML ("afterbegin" , data["temp"]);
+  /// return ///
+  return (header);
 }

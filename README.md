@@ -65,7 +65,7 @@ Your finished project must include all of the following requirements:
 
 *   [x] Following the instructions in the `Tabs/index.js` file, create individual Tabs components.
 
-*   [ ] Following the instructions in the `Cards/index.js` file, create individual Cards components.
+*   [x] Following the instructions in the `Cards/index.js` file, create individual Cards components.
 
 ## Stretch Problems
 
@@ -78,3 +78,5 @@ Your stretch challenge is to write the functionality of a `Carousel` component. 
 *   [ ] Create an 'infinite loop' carousel. In which as long as you click on an arrow, the array of images will loop over itself.
 
 *   [ ] If you have finished the above, research `data attributes`. Implement data attributes within your tabs as well as your cards. Give the tabs functionality so that when they are clicked they filter the cards to only display the cards that contain that topic.
+
+    > I started this...

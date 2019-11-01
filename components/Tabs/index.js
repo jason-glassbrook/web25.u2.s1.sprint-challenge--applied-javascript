@@ -7,3 +7,29 @@
 //
 //  The tab component should look like this:
 //    <div class="tab">topic here</div>
+
+/***********************************************************
+  SEQUENCE
+***********************************************************/
+{
+  const myData = {};
+
+  const myContainer = document.querySelector (".tabs");
+  const myTabs = [];
+
+  myContainer.append (...myTabs);
+}
+
+/***********************************************************
+  COMPONENTS
+***********************************************************/
+function Tab(data) {
+  /// create elements ///
+  const tab = newElem ("div");
+  /// class it up! ///
+  tab .upClass ("tab");
+  /// add static data ///
+  tab .insertAdjacentHTML ("afterbegin" , data["topic"]);
+  /// return ///
+  return (header);
+}

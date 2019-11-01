@@ -52,12 +52,12 @@
       myContainer.append (...myCards);
       ///
     })
-    // .catch ((re) => {
-    //   console.log ("--- 😨 --- uh-oh --- 😨 ---");
-    // })
-    // .finally ((re) => {
-    //   console.log ("--- 😘 --- we're done here --- 😘 ---");
-    // })
+    .catch ((re) => {
+      console.log ("--- 😨 --- uh-oh --- 😨 ---");
+    })
+    .finally ((re) => {
+      console.log ("--- 😘 --- we're done here --- 😘 ---");
+    })
 }
 
 /***************************************

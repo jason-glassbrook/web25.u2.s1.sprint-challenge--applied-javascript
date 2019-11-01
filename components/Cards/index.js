@@ -17,3 +17,50 @@
 // </div>
 //
 // Create a card for each of the articles and add the card to the DOM.
+
+/***********************************************************
+  SEQUENCE
+***********************************************************/
+{
+  const myAPI = `https://lambda-times-backend.herokuapp.com/articles`;
+  let myData = {};
+
+  const myContainer = document.querySelector (".cards-container");
+  let myCards = [];
+
+  axios
+    .get (myAPI)
+    .then ((re) => {
+      ///
+      console.log ("--- 😄 --- success --- 😄 ---");
+      /// store data ///
+      myData = re.data;
+      console.log (myData);
+      // /// make babies ///
+      // myCards = myData["topics"].map (
+      //   (data) => (Card ({"topic" : data}))
+      // );
+      // console.log (myCards);
+      // /// give babies ///
+      // myContainer.append (...myCards);
+      ///
+    })
+    .catch ((re) => {
+      console.log ("--- 😨 --- uh-oh --- 😨 ---");
+    })
+    .finally ((re) => {
+      console.log ("--- 😘 --- we're done here --- 😘 ---");
+    })
+}
+
+/***********************************************************
+  COMPONENTS
+***********************************************************/
+function Card(data) {
+  /// create elements ///
+  const card = newElem ("div");
+  /// class it up! ///
+  /// add static data ///
+  /// return ///
+  return (card);
+}

@@ -65,9 +65,9 @@ function Card(data) {
         authorPhoto = newElem ("img");
         authorName  = newElem ("span");
   /// build structure ///
-  card.append (headline , author);
-  author.append (authorImage , authorName);
-  authorImage.append (authorPhoto);
+  card        .append (headline , author);
+  author      .append (authorImage , authorName);
+  authorImage .append (authorPhoto);
   /// class it up! ///
   card        .upClass ("card");
   headline    .upClass ("headline");

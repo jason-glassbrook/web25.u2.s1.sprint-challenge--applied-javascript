@@ -17,4 +17,8 @@ function Header() {
         temp   = newElem ("span");
   /// build structure ///
   header.append (date , title , temp);
+  /// class it up! ///
+  header .upClass ("header");
+  date   .upClass ("date");
+  temp   .upClass ("temp");
 }

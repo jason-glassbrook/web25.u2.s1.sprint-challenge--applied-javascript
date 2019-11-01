@@ -11,8 +11,8 @@
 
 {
   const myData = {
-    "title" : `SMARCH 28, 2019`,
-    "date"  : `Lambda Times`,
+    "title" : `Lambda Times`,
+    "date"  : `SMARCH 28, 2019`,
     "temp"  : `98°`,
   };
 

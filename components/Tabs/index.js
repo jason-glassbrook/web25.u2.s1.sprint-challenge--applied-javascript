@@ -13,24 +13,29 @@
 ***********************************************************/
 {
   const myAPI = `https://lambda-times-backend.herokuapp.com/topics`;
-  const myData = {};
+  let myData = {};
 
   const myContainer = document.querySelector (".tabs");
-  const myTabs = [];
+  let myTabs = [];
 
   axios
     .get (myAPI)
     .then (function (re) {
       console.log ("--- 😄 --- success --- 😄 ---");
-      console.log (re.data);
-      // myContainer.append (...myTabs);
+      myData = re.data;
+      console.log (myData);
+      myTabs = myData["topics"].map (
+        (data) => (Tab ({"topic" : data}))
+      );
+      console.log (myTabs);
+      myContainer.append (...myTabs);
     })
-    .catch (function (re) {
-      console.log ("--- 😨 --- uh-oh --- 😨 ---");
-    })
-    .finally (function (re) {
-      console.log ("--- 😘 --- we're done here --- 😘 ---");
-    })
+    // .catch (function (re) {
+    //   console.log ("--- 😨 --- uh-oh --- 😨 ---");
+    // })
+    // .finally (function (re) {
+    //   console.log ("--- 😘 --- we're done here --- 😘 ---");
+    // })
 }
 
 /***********************************************************

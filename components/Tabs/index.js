@@ -12,12 +12,25 @@
   SEQUENCE
 ***********************************************************/
 {
+  const myAPI = `https://lambda-times-backend.herokuapp.com/topics`;
   const myData = {};
 
   const myContainer = document.querySelector (".tabs");
   const myTabs = [];
 
-  myContainer.append (...myTabs);
+  axios
+    .get (myAPI)
+    .then (function (re) {
+      console.log ("--- :D --- success --- :D ---");
+      console.log (re.data);
+      // myContainer.append (...myTabs);
+    })
+    .catch (function (re) {
+      console.log ("--- D: --- uh-oh --- D: ---");
+    })
+    .finally (function (re) {
+      console.log ("--- *: --- we're done here --- :* ---");
+    })
 }
 
 /***********************************************************

@@ -9,6 +9,9 @@
 //  </div >
 // And add it to the DOM in the .header-container component
 
+/***********************************************************
+  SEQUENCE
+***********************************************************/
 {
   const myData = {
     "title" : `Lambda Times`,
@@ -22,6 +25,9 @@
   myContainer.append (myHeader);
 }
 
+/***********************************************************
+  COMPONENTS
+***********************************************************/
 function Header(data) {
   /// create elements ///
   const header = newElem ("div"),

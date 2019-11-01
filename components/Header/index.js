@@ -16,7 +16,8 @@
     "temp"  : `98°`,
   };
 
-  const container = document.querySelector (".header-container");
+  const myContainer = document.querySelector (".header-container");
+  const myHeader = Header (myData);
 }
 
 function Header(data) {

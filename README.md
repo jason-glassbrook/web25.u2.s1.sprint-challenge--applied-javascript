@@ -30,13 +30,23 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1.  What is the DOM?
 
+    > The DOM is the "document object model" of an HTML/XML document: it's an object that represents (models) a document. Any language in which it's implemented (not just JavaScript) can interact with it to get and set data in the document.
+
 2.  What is an event?
+
+    > An event is ... an event. It's usually some form of user interaction that code can respond to. In JavaScript, you can attach "event listeners" to elements in the DOM that respond when a user interacts with those elements. For example, if a user clicks on an element, the event listener triggers a function that may respond to that click.
 
 3.  What is an event listener?
 
+    > An "event listener" is some fancy code that that operates in the background and "listens" for "events", such as user interaction with an element of a document. When an event listener "hears" an event that it was designed to "hear", it triggers some code that responds. 
+
 4.  Why would we convert a NodeList into an Array?
 
+    > We might convert a `NodeList` into an `Array` if we wanted to use array functions on it, like `.map()`, `.filter()`, or `.reduce()`. `NodeList` objects are only "array-like", so they only have `.forEach()` available for iteration.
+
 5.  What is a component?
+
+    > A "component" is reusable code that creates an HTML element (or a tree of them). Using components lets you programmatically generate parts or all of a document (e.g. website or webapp), ideally based on data you have or will get from somewhere.
 
 ### Git Set up
 

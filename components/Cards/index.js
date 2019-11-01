@@ -58,9 +58,12 @@
 ***********************************************************/
 function Card(data) {
   /// create elements ///
-  const card = newElem ("div");
-  /// class it up! ///
-  /// add static data ///
+  const card           = newElem ("div"),
+        headline       = newElem ("div"),
+        authorInfo     = newElem ("div");
+        authorImageDiv = newElem ("div");
+        authorImage    = newElem ("img");
+        authorName     = newElem ("span");
   /// return ///
   return (card);
 }

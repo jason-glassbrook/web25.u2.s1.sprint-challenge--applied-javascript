@@ -49,5 +49,5 @@ function Tab(data) {
   /// add static data ///
   tab .insertAdjacentHTML ("afterbegin" , data["topic"]);
   /// return ///
-  return (header);
+  return (tab);
 }
